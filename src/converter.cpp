@@ -47,6 +47,8 @@ string Converter::convert (double input) {
   };
 
   const string addons[] = {
+    "Quadrillion",
+    "Trillion",
     "Billion",
     "Million",
     "Thousand",
@@ -59,7 +61,7 @@ string Converter::convert (double input) {
    *  eg. 1234567 -> 1 million 234 thousand 567
    */
   unsigned int add = -1;
-  for (double i = 100000000000; i >= 100; i /= 1000) {
+  for (double i = 100000000000000000; i >= 100; i /= 1000) {
     add++;
     if (input < (i / 100)) continue;
 
